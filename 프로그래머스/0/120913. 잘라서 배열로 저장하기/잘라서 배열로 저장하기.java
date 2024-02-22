@@ -14,7 +14,7 @@ class Solution {
         int cnt = 0;
         String[] result = new String[length];
         
-        for (int i = 0; i < n * length; i += n) {
+        for (int i = 0; i < my_str.length(); i += n) {
             
             if (cnt+1 < length){
                 result[cnt] = my_str.substring(i, i+n);
