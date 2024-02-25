@@ -13,7 +13,7 @@ class Solution {
         }
         
         int result = 1;
-        if (multi > Math.pow(sum,2)) {
+        if (multi > sum * sum) {
             result = 0;
         }
         
