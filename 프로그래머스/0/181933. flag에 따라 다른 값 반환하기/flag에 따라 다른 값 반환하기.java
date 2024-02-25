@@ -1,5 +1,12 @@
 class Solution {
     public int solution(int a, int b, boolean flag) {
-       return flag ? a + b : a - b;
+        int result = 0;
+        if (flag) {
+            result = a + b;
+        } else {
+            result = a - b;
+        }
+        
+        return result;
     }
 }
