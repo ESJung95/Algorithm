@@ -2,21 +2,18 @@ import java.util.*;
 class Solution {
     public long solution(long n) {
         
+        // 큰 것부터 리턴
+       long result = 0;
+        
         String str = String.valueOf(n);
-        String[] arr = new String[str.length()];
-        int index = 0;
-        for (String item : str.split("")) {
-            arr[index] = item;
-            index++;
-        }
-        
+        char[] arr = str.toCharArray();
         Arrays.sort(arr);
-        StringBuilder sb = new StringBuilder();
         
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
-        }
+        String temp = new String(arr); // 현재 오름차순
+        StringBuilder sb = new StringBuilder(temp);
+        String resultStr = sb.reverse().toString();
         
-        return Long.parseLong(sb.reverse().toString());
+        result = Long.parseLong(resultStr);
+        return result;
     }
 }
