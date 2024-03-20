@@ -1,20 +1,18 @@
 class Solution {
     public int solution(int[] array, int n) {
-        int answer = 0;
-        int diff = 0;
-        int min = Integer.MAX_VALUE;
+        
+        int min = 100;
+        int result = 0;
         
         for (int i = 0; i < array.length; i++) {
-            diff = Math.abs(n - array[i]);
-            if (diff < min) {
-                min = diff;
-                answer = array[i];
-                
-            } else if (diff == min && array[i] < answer) {
-                answer = array[i];
+            if (Math.abs(array[i] - n) < min) {
+                min = (int)Math.abs(array[i] - n);
+                result = array[i];
+            } else if (min == Math.abs(array[i] - n) && result > array[i]) {
+                result = array[i];
             }
         }
         
-        return answer;
+        return result;
     }
 }
