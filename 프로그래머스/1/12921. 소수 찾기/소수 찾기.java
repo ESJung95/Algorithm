@@ -16,7 +16,6 @@ class Solution {
         }
         
         int result = 0;
-		//소수 개수 구하기
         for (int i = 2; i < isPrime.length; i++) {
             if (isPrime[i]) {
                 result++;
