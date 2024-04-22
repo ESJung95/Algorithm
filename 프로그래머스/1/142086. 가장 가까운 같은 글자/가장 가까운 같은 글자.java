@@ -1,5 +1,6 @@
 class Solution {
     public int[] solution(String s) {
+        
         // 앞에 있고 가까운 곳에 있는 같은 글자
         char[] arr = s.toCharArray();
         int[] result = new int[arr.length];
