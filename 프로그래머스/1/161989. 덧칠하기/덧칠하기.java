@@ -1,21 +1,16 @@
 class Solution {
-    public int solution(int n, int m, int[] section) {
-        
-        // start 값을 section[0]
+	public int solution(int n, int m, int[] section) {
+        int result = 0;
         int start = section[0];
-        int end = section[0] + m - 1;
-        int result = 1;
-        
+
+        result++;
         for (int item : section) {
-            if (item >= start && item <= end) {
+            if (start + m > item) {
                 continue;
-            } else {
-                start = item;
-                end = item + m - 1;
-                result++;
             }
+            start = item;
+            result++;
         }
-        
         return result;
     }
 }
