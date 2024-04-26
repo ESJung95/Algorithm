@@ -38,7 +38,7 @@ class Solution {
             }
         }
         
-        System.out.println(zeroCnt);
+        // System.out.println(zeroCnt);
         // System.out.println(matchCnt);
         result[1] = map.get(matchCnt);
         
