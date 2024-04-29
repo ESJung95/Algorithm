@@ -10,7 +10,7 @@ class Solution {
         for (int i = l; i <= r; i++) {
             String num = String.valueOf(i);
             Matcher matcher = pattern.matcher(num);
-            // 패턴과 일치하는지 확인
+            
             if (matcher.matches()) {
                 list.add(i);
             }
