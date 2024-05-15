@@ -1,23 +1,21 @@
 import java.util.*;
+
 class Solution {
     public String solution(String s) {
+        StringBuilder sb = new StringBuilder();
+        String[] arr = s.split(" ");
         
-        StringBuilder result = new StringBuilder();
-        ArrayList<Integer> list = new ArrayList<>();
-        
-        for (String item : s.split(" ")) {
-            list.add(Integer.parseInt(item));
+        int[] nums = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            nums[i] = Integer.parseInt(arr[i]);
         }
         
-        Collections.sort(list);
-        // System.out.println(list);
-        result.append(String.valueOf(list.get(0)));
-        result.append(" ");
-        result.append(String.valueOf(list.get(list.size() -1)));
+        Arrays.sort(nums);
         
-        return result.toString();
+        sb.append(nums[0]);
+        sb.append(" ");
+        sb.append(nums[nums.length - 1]);
         
-        
-        
+        return sb.toString();
     }
 }
