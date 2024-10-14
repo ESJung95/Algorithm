@@ -1,0 +1,5 @@
+-- 동물 보호소에 들어온 아픈동물 중 동물의 아이디, 이름 조회 , 아이디순으로 나열
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+WHERE INTAKE_CONDITION LIKE 'Sick'
+ORDER BY ANIMAL_ID ASC
