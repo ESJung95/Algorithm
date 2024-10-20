@@ -1,0 +1,6 @@
+-- 기르던 개이름에 EL , 아이디와 이름을 조회 + 이름순으로 조회
+
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+WHERE ANIMAL_TYPE = 'DOG' AND NAME LIKE '%EL%'
+ORDER BY NAME
