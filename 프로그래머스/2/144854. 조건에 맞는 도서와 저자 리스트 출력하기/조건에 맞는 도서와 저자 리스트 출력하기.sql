@@ -1,0 +1,9 @@
+-- 경제 카테고리에 속하는 도서id, 저자명, 출판일 리스트 출력
+-- 출판일 기준 오름차순
+
+SELECT B.BOOK_ID, A.AUTHOR_NAME, DATE_FORMAT(B.PUBLISHED_DATE, '%Y-%m-%d')
+FROM BOOK B
+JOIN AUTHOR A ON A.AUTHOR_ID = B.AUTHOR_ID
+WHERE B.CATEGORY = '경제'
+ORDER BY PUBLISHED_DATE ASC
+
