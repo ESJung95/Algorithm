@@ -3,6 +3,6 @@
 
 
 
-select count(id) AS FISH_COUNT
+ select count(*) as FISH_COUNT
 from fish_info
-where length is null
+where IFNULL(LENGTH, 0) <= 10
